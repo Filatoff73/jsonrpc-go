@@ -212,6 +212,12 @@ func validateID(id interface{}) (err *ErrorObj) {
 		switch id.(type) {
 		case string:
 		case int:
+		case int8:
+		case int16:
+		case int32:
+		case int64:
+		case float32:
+		case float64:
 		default:
 			err = InternalError()
 		}
